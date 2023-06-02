@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPIO Control</title>
+    <script>
+        function turnOn() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', 'http://192.168.1.28/gpio/on', true);
+            xhttp.send();
+        }
+
+        function turnOff() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', 'http://192.168.1.28/gpio/off', true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>GPIO Control</h1>
+    <button onclick="turnOn()">Turn On</button>
+    <button onclick="turnOff()">Turn Off</button>
+</body>
+</html>
